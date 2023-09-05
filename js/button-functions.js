@@ -1,0 +1,3 @@
+$('#createFoodName').on('click', () => {
+
+})
