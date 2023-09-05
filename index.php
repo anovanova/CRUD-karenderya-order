@@ -20,19 +20,25 @@
             <input type="text" name="" id="createFoodName" class='form-control mt-2' placeholder="Food Name">
             <input type="number" id='createFoodQuantity' class='form-control mt-2' placeholder="Food Quantity">
             <input type="number" id='createFoodPrice' class='form-control mt-2' placeholder="Food Price">
-            <button class='btn btn-success mt-2'>Create Food Item</button>
+            <button class='btn btn-success mt-2' id='addFoodItemBtn'>Create Food Item</button>
         </div>
         <div id='orderHistoryContainer' hidden>
 
         </div>
         <div id='orderFoodContainer'>
-            <input type="text" name="" id="foodName" class='form-control mt-2' placeholder="Food Name">
+            <select name="" id="foodName" class='form-control mt-2'>
+                <option value="NONE">Select Food</option>
+            </select>
             <input type="number" id='foodQuantity' class='form-control mt-2' placeholder="Food Quantity">
-            <button class='btn btn-success mt-2'>Submit Order</button>
+            <p class='mt-2'>Available Quantity: <b><span id='quantityText'></span></b></p>
+            <p>Price: <b><span id='priceText'></span></b></p>
+            <button class='btn btn-success mt-2' id="submitOrderBtn">Submit Order</button>
         </div>
     </section>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/button-functions.js"></script>
+    <script src="js/fetch-food-items.js"></script>
+    <script src="js/compute-price.js"></script>
 </body>
 </html>
